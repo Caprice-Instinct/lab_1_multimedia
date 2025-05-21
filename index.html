@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strathmore University</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">
+      <img src="strathmore.png" alt="Strathmore University Logo" />
+      <span>Strathmore University</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#vision-mission">Vision & Mission</a></li>
+      <li><a href="#schools">Schools & Programmes</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#campus-life">Campus Life</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to Strathmore University</h1>
+    <p>Where Innovation Meets Excellence</p>
+  </div>
+
+  <!-- Vision and Mission -->
+  <section id="vision-mission" class="vision-mission">
+    <h2>Our Vision</h2>
+    <p>To become a leading out-come driven entrepreneurial university with international recognition.</p>
+
+    <h2>Our Mission</h2>
+    <p>To provide all-round quality education in an atmosphere of freedom and responsibility, excellence in teaching, research and scholarship, and ethical and social development.</p>
+  </section>
+
+  <!-- Schools and Programmes -->
+  <section id="schools" class="schools">
+    <h2>Schools & Programmes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>School</th>
+          <th>Programmes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>School of Computing and Engineering Sciences</td>
+          <td>BSc in Informatics and Computer Science, BSc in Telecommunications</td>
+        </tr>
+        <tr>
+          <td>School of Business</td>
+          <td>Bachelor of Commerce, Master of Business Administration (MBA)</td>
+        </tr>
+        <tr>
+          <td>School of Humanities and Social Sciences</td>
+          <td>Bachelor of Arts in Communication, Bachelor of Arts in International Studies</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Strathmore University</h2>
+
+    <h3>Achievements</h3>
+    <p>Strathmore University has received international accreditations, produced award-winning research, and has a strong network of alumni in leadership positions globally.</p>
+
+    <h3>Ongoing Projects</h3>
+    <ul>
+      <li>Strathmore Energy Research Centre (SERC)</li>
+      <li>AI and Data Science Research Program</li>
+      <li>Student Innovation Incubator (iBizAfrica)</li>
+    </ul>
+
+    <h3>Address</h3>
+    <p>Strathmore University, Ole Sangale Road, Madaraka Estate, Nairobi, Kenya</p>
+  </section>
+
+  <!-- Carousel Section -->
+  <section id="campus-life" class="carousel">
+    <h2>Campus Life</h2>
+    <div class="carousel-container">
+      <div class="slides">
+        <img src="campus.png" alt="Campus View 1" class="carousel-img" />
+        <img src="campus2.jpg" alt="Campus View 2" class="carousel-img" />
+        <img src="campus3.jpg" alt="Campus View 3" class="carousel-img" />
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+      <div class="dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 Strathmore University. All rights reserved.</p>
+      <p>Contact: <a href="mailto:info@strathmore.edu">info@strathmore.edu</a> | +254 703 034000</p>
+      <p>
+        <a href="https://www.strathmore.edu" target="_blank">Website</a> |
+        <a href="https://twitter.com/StrathU" target="_blank">Twitter</a> |
+        <a href="https://www.facebook.com/StrathmoreUniversity" target="_blank">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const images = document.querySelectorAll(".carousel-img");
+    const dots = document.querySelectorAll(".dot");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+        dots[i].classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+
+    document.querySelector(".next").addEventListener("click", nextSlide);
+    document.querySelector(".prev").addEventListener("click", prevSlide);
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        currentIndex = parseInt(dot.dataset.index);
+        showSlide(currentIndex);
+      });
+    });
+
+    setInterval(nextSlide, 5000);
+    showSlide(currentIndex);
+  </script>
+</body>
+</html>
