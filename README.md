@@ -30,16 +30,16 @@ This GitHub repository contains a simple and responsive HTML-CSS webpage represe
 - `index.html` – Main HTML file containing the webpage structure.
 - `style.css` – External CSS file for styling the webpage.
 - Images that include:
- - `campus.png`
- - `campus2.png`
- - `campus3.png`
- - `campuslife.png`
- - `hero.png`
+    - `campus.png`
+     - `campus2.png`
+     - `campus3.png`
+    - `campuslife.png`
+     - `hero.png`
 
 ## Contributors
 
-Gitiche Emmanuel Chege
-Kimanga Victor
-Wabuga Linet Wangui
-Kariuki Maryfancy
-Tracey Munyagia
+Gitiche Emmanuel Chege.
+Kimanga Victor.
+Wabuga Linet Wangui.
+Kariuki Maryfancy.
+Tracey Munyagia.
