@@ -38,8 +38,8 @@ This GitHub repository contains a simple and responsive HTML-CSS webpage represe
 
 ## Contributors
 
--Gitiche Emmanuel Chege.
--Kimanga Victor.
--Wabuga Linet Wangui.
--Kariuki Maryfancy.
--Tracey Munyagia.
+- Gitiche Emmanuel Chege.
+- Kimanga Victor.
+- Wabuga Linet Wangui.
+- Kariuki Maryfancy.
+- Tracey Munyagia.
